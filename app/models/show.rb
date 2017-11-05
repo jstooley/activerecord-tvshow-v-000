@@ -11,6 +11,9 @@ class Show < ActiveRecord::Base
     self.minimum(:rating)
   end
   def self.least_popular_show
+    show = self.where("rating = ?", Show.minimum(:rating))
+
+    show[0] # becasue where returns result as array
   end
   def self.ratings_sum
   end
