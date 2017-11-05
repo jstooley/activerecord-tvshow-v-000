@@ -1,4 +1,4 @@
-class CreateShows < ActiveRecord::migrate
+class CreateShows < ActiveRecord::Migrate
   def change
     create_table :shows do |s|
       s.datetime :name
